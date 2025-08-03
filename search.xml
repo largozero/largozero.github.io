@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>博客改用HTTPS+Github Token方法</title>
+      <link href="/2025/08/03/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8HTTPS-Github-Token%E6%96%B9%E6%B3%95/"/>
+      <url>/2025/08/03/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8HTTPS-Github-Token%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="改用-HTTPS-GitHub-Token"><a href="#改用-HTTPS-GitHub-Token" class="headerlink" title="改用 HTTPS + GitHub Token"></a>改用 HTTPS + GitHub Token</h3><p>如果 SSH 被屏蔽，最简单的方法是改用 HTTPS 并配置 Personal Access Token：</p><ol><li><p><strong>生成 GitHub Token</strong></p><ul><li>访问 <a href="https://github.com/settings/tokens">GitHub Token 设置</a>，生成一个 <code>repo</code> 权限的 Token（勾选 <code>repo</code> 和 <code>workflow</code>）。</li></ul></li><li><p><strong>修改 Hexo 配置</strong><br>在 <code>_config.yml</code> 中修改 <code>repo</code> 为 HTTPS 格式，并填入 Token：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://&lt;你的Token&gt;@github.com/largozero/largozero.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p><strong>示例</strong>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repo: https://ghp_abc123xyz@github.com/largozero/largozero.github.io.git</span><br></pre></td></tr></table></figure></li><li><p><strong>重新部署</strong>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 技术交流 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2025/08/02/hello-world/"/>
       <url>/2025/08/02/hello-world/</url>
