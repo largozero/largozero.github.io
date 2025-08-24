@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>8.2</title>
+      <link href="/2025/08/03/8-2/"/>
+      <url>/2025/08/03/8-2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="8-2-周六"><a href="#8-2-周六" class="headerlink" title="8.2 周六"></a>8.2 周六</h1><p>今天有个足球比赛，莱州对招远，说好听点就是“2025年烟台城市足球超级联赛莱州赛区“，这是我的第一场足球比赛，体验体验很不错啊。</p><p>周五上午就去领票，是免费的，一共一千张，比赛地点在双语新校区。</p><p>周六不是说四点半入场吗，没啥经验，四点半准时到门口竟然发现马上就要开始了！看着样子，估计三点半就已经有人了。急忙进去，耳朵就被吵的嗡嗡响（好在适应了）。那儿还送了个大礼包，有一瓶农夫山泉，一个帽子，还有一个螃蟹玩偶，名曰：“有钳人”。先不看上面球员踢得如何，光在啦啦队那儿就整得人热血沸腾的。全场的球权基本一直在莱州手里，并在中场对抗后场防御不足时直接突击进了两球，最终二比零获得比赛胜利。这场比赛虽不像这段时间世俱杯那样专业顶级球员之间的对抗，但业余爱好者在工作的同时参加比赛，不管踢得如何，敢于尝试，敢于拼搏的精神就是体育运动的精髓所在。虽然不会踢球，也不会看，但在观众席对球员的支持与呐喊同样快乐。</p><p>明天天天跳绳有个虚拟跳绳赛事，前几名还有奖呢。不指望能得奖，因为里面全是一分钟跳三百多个的高手。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日常记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客改用HTTPS+Github Token方法</title>
+      <link href="/2025/08/03/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8HTTPS-Github-Token%E6%96%B9%E6%B3%95/"/>
+      <url>/2025/08/03/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8HTTPS-Github-Token%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="改用-HTTPS-GitHub-Token"><a href="#改用-HTTPS-GitHub-Token" class="headerlink" title="改用 HTTPS + GitHub Token"></a>改用 HTTPS + GitHub Token</h3><p>如果 SSH 被屏蔽，最简单的方法是改用 HTTPS 并配置 Personal Access Token：</p><ol><li><p><strong>生成 GitHub Token</strong></p><ul><li>访问 <a href="https://github.com/settings/tokens">GitHub Token 设置</a>，生成一个 <code>repo</code> 权限的 Token（勾选 <code>repo</code> 和 <code>workflow</code>）。</li></ul></li><li><p><strong>修改 Hexo 配置</strong><br>在 <code>_config.yml</code> 中修改 <code>repo</code> 为 HTTPS 格式，并填入 Token：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://&lt;你的Token&gt;@github.com/largozero/largozero.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p><strong>示例</strong>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repo: https://ghp_abc123xyz@github.com/largozero/largozero.github.io.git</span><br></pre></td></tr></table></figure></li><li><p><strong>重新部署</strong>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 技术交流 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2025/08/02/hello-world/"/>
+      <url>/2025/08/02/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
